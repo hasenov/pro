@@ -1,0 +1,574 @@
+// Общие компоненты
+.btn
+	display: inline-block
+	border: none
+	cursor: pointer
+	padding: 19px 32px
+	border-radius: 6px
+	line-height: 1
+	text-align: center
+	transition: background-color .3s ease, color .3s ease, box-shadow .3s ease
+	&:hover
+		text-decoration: none
+	&-sm
+		padding: 13px 24px
+		font-size: 15px
+	&-accent
+		background-color: $accent
+		color: #fff
+		&:hover
+			background-color: darken($accent, 5)
+			color: #fff
+	&-white
+		box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 16px 0px
+		color: $accent
+		&:hover
+			box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 16px 0px
+			color: $accent
+	&-alpha
+		background-color: $alpha
+		color: #fff
+		&:hover
+			background-color: darken($alpha, 5)
+
+.headline-wrap
+	justify-content: center
+
+.headline
+	text-align: center
+	margin-bottom: 24px
+	&__title
+		margin-bottom: 24px
+	&__description
+		color: $gray
+	&_inverse
+		.headline__title
+			color: #fff
+		.headline__description
+			color: $light
+
+.section-title
+	font-size: 64px
+	line-height: 1.1
+	&_sm
+		font-size: 48px
+
+.section-description
+	font-size: 24px
+	p
+		margin-bottom: 0
+
+.section
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+
+.list-checks
+	font-size: 15px
+	list-style-type: none
+	margin: 0
+	padding: 0
+	li
+		position: relative
+		&:not(:last-child)
+			margin-bottom: 12px
+		&:not(.no-check)::before
+			content: ''
+			display: inline-block
+			vertical-align: middle
+			width: 24px
+			height: 24px
+			background: url(../img/icons/check.svg) center / contain no-repeat
+			margin-right: 8px
+
+// Шапка
+.header
+	background: $secondary-gr
+	padding: 26px 0
+	color: #fff
+	position: relative
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background: $secondary-gr
+	&__container
+		display: flex
+		align-items: center
+		justify-content: space-between
+		position: relative
+		z-index: 1
+	&__navbar
+		display: flex
+		align-items: center
+	&__logo
+		font-size: 28px
+		font-weight: bold
+	&__menu
+		margin-right: 40px
+	&__contacts
+		margin-right: 32px
+	&__btns
+	&__hamburger
+		display: none
+		justify-content: center
+		align-items: center
+		width: 40px
+		height: 40px
+		padding: 0
+		border-radius: 50%
+		border: 1px solid $lighter
+		position: relative
+		z-index: 2
+		&:hover
+			opacity: 1
+		.hamburger-box
+			width: 18px
+			height: 18px
+		.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+			background-color: $lighter
+			width: 18px
+			height: 3px
+		.hamburger-inner
+			&::before
+				top: -7px
+			&::after
+				top: -14px
+		&.is-active
+			&:hover
+				opacity: 1
+			.hamburger-inner
+				transform: translate3d(0, -7px, 0) rotate(-45deg)
+				&, &::before, &::after
+					background-color: #fff
+
+.menu
+	ul
+		list-style-type: none
+		margin: 0 -12px
+		padding: 0
+		display: flex
+	li
+		margin: 0 12px
+	a
+		color: $lighter
+		transition: color .3s ease
+		&:hover
+			color: #fff
+
+.contacts-header
+	&__item
+
+.item-contact
+	text-align: right
+	&__title
+		font-size: 13px
+		color: $lighter
+		margin-bottom: 4px
+	&__value
+		color: #fff
+		margin-bottom: 0
+		a
+			color: #fff
+
+.btns-header
+	&__btn
+
+// Футер
+.footer
+	padding: 80px 0
+	background: $secondary-gr
+	color: $light
+	a
+		color: $light
+	&__container
+	&__socials
+		margin-bottom: 40px
+	&__menu
+		margin-bottom: 40px
+	&__copyright
+		text-align: center
+		margin-bottom: 0
+
+.socials-footer
+	display: flex
+	justify-content: center
+	margin-left: -10px
+	margin-right: -10px
+	&__item
+		margin: 0 10px
+
+.item-social-footer
+	background-color: rgba(#fff, .2)
+	width: 56px
+	height: 56px
+	display: flex
+	justify-content: center
+	align-items: center
+	border-radius: 50%
+	transition: background-color .3s ease
+	&:hover
+		background-color: rgba(#fff, .4)
+	&__icon
+		width: 24px
+
+.menu-footer
+	text-align: center
+	ul
+		list-style-type: none
+		margin: 0 -20px
+		padding: 0
+		display: flex
+		justify-content: center
+	li
+		margin: 0 20px
+	a
+
+// Главные стили
+.section-showcase
+
+.showcase
+	display: flex
+	flex-direction: column-reverse
+	&__body
+		padding: 80px 0
+	&__title
+		font-size: 54px
+		margin-bottom: 24px
+	&__text-wrap
+		font-size: 24px
+		margin-bottom: 40px
+	&__btns
+		display: flex
+		flex-wrap: wrap
+		margin-left: -10px
+		margin-right: -10px
+	&__btn
+		margin: 0 10px
+	&__img
+		display: flex
+		img
+			width: 100%
+			height: 380px
+			object-fit: cover
+
+.section-benefits
+	padding: 120px 0
+	color: #fff
+	position: relative
+	.container
+		position: relative
+		z-index: 1
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background: rgba(39, 38, 67, 0.7)
+
+.benefits
+	justify-content: center
+	&__item
+
+.item-benefit
+	text-align: center
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 80px
+		height: 80px
+		border-radius: 50%
+		background-color: #fff
+		margin: 0 auto 32px
+	&__icon-img
+		width: 48px
+	&__title
+		font-size: 28px
+		font-weight: normal
+		line-height: 1.1
+		margin-bottom: 16px
+	&__text-wrap
+		color: $light
+		font-weight: 500
+		p:last-child
+			margin-bottom: 0
+
+.section-steps
+	padding: 120px 0 147px
+	.headline
+		margin-bottom: 64px
+
+.timeline
+	justify-content: center
+	&__item
+		display: flex
+		width: 50%
+		position: relative
+		&:nth-child(odd)
+			right: -32px
+			.timeline__content
+				padding-right: 32px
+		&:nth-child(even)
+			margin-left: auto
+			flex-direction: row-reverse
+			left: -32px
+			.timeline__content
+				padding-left: 32px
+		&:not(:last-child)
+			.timeline__content
+				padding-bottom: 56px
+			.timeline__icon-wrap
+				&::after
+					content: ''
+					display: block
+					position: absolute
+					height: 100%
+					top: 32px
+					left: 50%
+					transform: translateX(-50%)
+					border: 1px dashed rgba(0,0,0,.1)
+					z-index: -1
+	&__content
+		text-align: right
+		flex: 1 1 auto
+	&__title
+		font-size: 24px
+		line-height: 1.3
+		margin-bottom: 8px
+	&__text
+		margin-bottom: 0
+	&__icon-wrap
+		position: relative
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		flex: 0 0 64px
+		width: 64px
+		height: 64px
+		background-color: #fff
+		border-radius: 50%
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 40px 0px
+	&__icon-img
+		width: 80%
+
+.section-pricing
+	padding: 80px 0
+	.headline
+		margin-bottom: 30px
+	.section-description
+		color: $lighter
+
+.services
+	&__item
+		margin-bottom: 30px
+
+.item-service
+	&__inner
+		background-color: #fff
+		border-radius: 16px
+		padding: 32px
+		display: flex
+		flex-direction: column
+		height: 100%
+	&__header
+		border-bottom: 1px solid rgba(#000, .1)
+		padding-bottom: 16px
+	&__name
+		font-size: 20px
+		color: $accent
+		margin-bottom: 10px
+		line-height: 1
+	&__prices
+	&__price
+		font-size: 16px
+		line-height: 1.65
+		margin-bottom: 5px
+		span
+			font-size: 20px
+			font-weight: bold
+	&__title
+		font-size: 28px
+		margin-bottom: 0
+	&__body
+		flex: 1 1 auto
+		display: flex
+		flex-direction: column
+	&__list
+		padding: 16px 0 0
+		margin-bottom: 24px
+	&__btn
+		width: 100%
+		margin-top: auto
+	&_secondary
+		.item-service__inner
+			background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(61,166,49,1) 100%, rgba(0,212,255,1) 100%)
+
+// Micromodal
+.modal
+	&__overlay
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: rgba(0,0,0,0.6)
+		display: flex
+		justify-content: center
+		align-items: center
+		z-index: 2
+	&__container-inner
+		background-color: #fff
+		padding: 50px 70px
+		max-width: 700px
+		max-height: 100vh
+		border-radius: 24px
+		overflow-y: auto
+		position: relative
+	&__close
+		border: none
+		background: none
+		padding: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 48px
+		height: 48px
+		position: absolute
+		top: 32px
+		right: 32px
+		img
+			width: 24px
+			flex: 0 0 24px
+	&__header
+		text-align: center
+		margin-bottom: 30px
+	&__title
+		margin-bottom: 16px
+	&__close-btn
+		margin-top: 24px
+
+.modal-success
+	.modal__header
+		margin-bottom: 0
+
+@keyframes mmfadeIn
+	from
+		opacity: 0
+	to
+		opacity: 1
+@keyframes mmfadeOut
+	from
+		opacity: 1
+	to
+		opacity: 0
+@keyframes mmslideIn
+	from
+		transform: translateY(15%)
+	to
+		transform: translateY(0)
+@keyframes mmslideOut
+	from
+		transform: translateY(0)
+	to
+		transform: translateY(-10%)
+
+.micromodal-slide
+	display: none
+.micromodal-slide.is-open
+	display: block
+.micromodal-slide[aria-hidden="false"] .modal__overlay
+	animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1)
+.micromodal-slide[aria-hidden="false"] .modal__container
+	animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1)
+.micromodal-slide[aria-hidden="true"] .modal__overlay
+	animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1)
+.micromodal-slide[aria-hidden="true"] .modal__container
+	animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1)
+
+.form
+	&__controls
+		margin-bottom: 28px
+	&__group
+		margin-bottom: 10px
+	&__control
+		width: 100%
+		height: 58px
+		border: 2px solid #ccc
+		border-radius: 8px
+		padding: 0 16px
+		outline: none
+		transition: border-color .3s ease
+		&::placeholder
+			color: #ccc
+		&:focus
+			border-color: $alpha
+	&__options
+	&__radios
+		margin-bottom: 30px
+	&__label
+		font-size: 18px
+		font-weight: normal
+		margin-bottom: 16px
+	&__radio
+		margin-bottom: 16px
+	&__btn
+		width: 100%
+	&__submit
+		svg
+			display: none
+			margin: 0 auto
+		&.active
+			svg
+				display: block
+			.form__btn-text
+				display: none
+
+.radio
+	display: flex
+	align-items: center
+	position: relative
+	cursor: pointer
+	&:hover
+		.radio__dot
+			border-color: $alpha
+	&__input
+		position: absolute
+		width: 0
+		height: 0
+		opacity: 0
+		&:checked
+			~ .radio__dot
+				background-color: $alpha
+				border-color: $alpha
+				&::before
+					transform: scale(1)
+	&__dot
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 24px
+		height: 24px
+		border-radius: 50%
+		background-color: transparent
+		margin-right: 16px
+		border: 2px solid #e6e6e6
+		position: relative
+		transition: border-color .15s ease, background-color .15s ease
+		&::before
+			content: ''
+			display: block
+			width: 8px
+			height: 8px
+			background-color: #fff
+			border-radius: 50%
+			transform: scale(0)
+			transition: transform .15s ease

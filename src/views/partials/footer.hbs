@@ -1,0 +1,128 @@
+<footer class="footer">
+	<div class="footer__container container">
+		
+		<div class="footer__socials socials-footer">
+			<a href="https://t.me/webpromotionbot" class="socials-footer__item item-social-footer" target="_blank">
+				<img src="assets/img/icons/telegram.svg" alt="alt" class="item-social-footer__icon">
+			</a>
+		</div>
+
+		<nav class="footer__menu menu-footer">
+			<ul>
+				<li><a href="#about">О компании</a></li>
+				<li><a href="#benefits">Преимущества</a></li>
+				<li><a href="#pricing">Цены</a></li>
+			</ul>
+		</nav>
+
+		<p class="footer__copyright">© 2022 PROдвижение</p>
+
+	</div>
+</footer>
+
+<div class="modal micromodal-slide" id="modal-callback" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-callback-title">
+			<div class="modal__container-inner">
+				<div class="modal__inner">
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close>
+						<img src="assets/img/icons/close.svg" alt="alt">
+					</button>
+					<header class="modal__header">
+						<h2 class="modal__title section-title section-title_sm" id="modal-callback-title">Хочу увеличить продажи</h2>
+						<div class="modal__text-wrap">
+							<p>Комплексное продвижение вашего бизнеса. Мы не продаем процесс, а продаем результат.</p>
+						</div>
+					</header>
+					<div class="modal__content" id="modal-callback-content">
+						<form class="modal__form form" id="formCallback">
+							<div class="form__controls">
+								<div class="form__group">
+									<input type="text" class="form__control" placeholder="Ваше имя" required>
+								</div>
+								<div class="form__group">
+									<input type="tel" class="form__control" placeholder="+380.." required>
+								</div>
+							</div>
+							<div class="form__options">
+								<div class="form__radios">
+									<h3 class="form__label">Выберите услугу (Не обязательно)</h3>
+									<label class="form__radio radio">
+										<input type="radio" class="radio__input" name="serviceType" value="Одностраничный сайт" checked>
+										<span class="radio__dot"></span>
+										Одностраничный сайт
+									</label>
+									<label class="form__radio radio">
+										<input type="radio" class="radio__input" name="serviceType" value="Корпоративный сайт">
+										<span class="radio__dot"></span>
+										Корпоративный сайт
+									</label>
+									<label class="form__radio radio">
+										<input type="radio" class="radio__input" name="serviceType" value="Интернет Магазин">
+										<span class="radio__dot"></span>
+										Интернет Магазин
+									</label>
+								</div>
+								<div class="form__radios">
+									<h3 class="form__label">Вам нужно продвижение? (Не обязательно)</h3>
+									<label class="form__radio radio">
+										<input type="radio" class="radio__input" name="needSeo" value="Да, мне нужно продающее решение." checked>
+										<span class="radio__dot"></span>
+										Да, мне нужно продающее решение.
+									</label>
+									<label class="form__radio radio">
+										<input type="radio" class="radio__input" name="needSeo" value="Нет, хочу просто сайт.">
+										<span class="radio__dot"></span>
+										Нет, хочу просто сайт.
+									</label>
+								</div>
+							</div>
+							<button class="form__submit form__btn btn btn-alpha" type="submit">
+								<svg height="30" viewBox="0 0 120 30" width="120" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+									<circle cx="15" cy="15" r="9.36849">
+									<animate attributeName="r" begin="0s" calcMode="linear" dur="0.8s" from="15" repeatCount="indefinite" to="15" values="15;9;15"></animate>
+									<animate attributeName="fill-opacity" begin="0s" calcMode="linear" dur="0.8s" from="1" repeatCount="indefinite" to="1" values="1;.5;1"></animate>
+									</circle>
+									<circle cx="60" cy="15" fill-opacity="0.3" r="14.6315">
+									<animate attributeName="r" begin="0s" calcMode="linear" dur="0.8s" from="9" repeatCount="indefinite" to="9" values="9;15;9"></animate>
+									<animate attributeName="fill-opacity" begin="0s" calcMode="linear" dur="0.8s" from="0.5" repeatCount="indefinite" to="0.5" values=".5;1;.5"></animate>
+									</circle>
+									<circle cx="105" cy="15" r="9.36849">
+									<animate attributeName="r" begin="0s" calcMode="linear" dur="0.8s" from="15" repeatCount="indefinite" to="15" values="15;9;15"></animate>
+									<animate attributeName="fill-opacity" begin="0s" calcMode="linear" dur="0.8s" from="1" repeatCount="indefinite" to="1" values="1;.5;1"></animate>
+									</circle>
+								</svg>
+								<span class="form__btn-text">Оставить заявку</span>
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-success micromodal-slide" id="modal-callback-success" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-callback-success-title">
+			<div class="modal__container-inner">
+				<div class="modal__inner">
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close>
+						<img src="assets/img/icons/close.svg" alt="alt">
+					</button>
+					<header class="modal__header">
+						<h2 class="modal__title section-title section-title_sm" id="modal-callback-success-title">Заявка оформлена!</h2>
+						<div class="modal__text-wrap">
+							<p>Наш менеджер позвонит вам в течение 15 минут уточнить детали. Хорошего дня!</p>
+						</div>
+						<button class="modal__close-btn modal__btn btn btn-alpha" type="button" data-micromodal-close>Спасибо!</button>
+					</header>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="{{assets}}/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+/*==========  Desktop First  ==========*/
+
+@media screen and (max-width: 1400px)
+	// 
+
+@media screen and (max-width: 1200px)
+	.header
+		padding: 18px 0
+		z-index: 2
+		&__hamburger
+			display: flex
+		&__navbar
+			position: fixed
+			z-index: 2
+			top: 0
+			right: 0
+			width: 100%
+			height: 100%
+			background: linear-gradient(to right, #004d40, rgba(230, 230, 230, 1))
+			flex-direction: column
+			align-items: flex-start
+			justify-content: center
+			max-width: 280px
+			padding: 32px
+			transform: translateX(100%)
+			opacity: 0
+			visibility: hidden
+			transition: transform .3s ease, opacity .3s ease, visibility .3s ease
+			&.active
+				transform: translateX(0)
+				opacity: 1
+				visibility: visible
+		&__menu, &__contacts, &__btns
+			width: 100%
+		&__menu
+			margin: 0 0 40px
+		&__contacts
+			margin: 0 0 24px
+
+	.menu
+		ul
+			margin: 0
+			display: block
+		li
+			margin: 0
+			&:not(:last-child)
+				margin-bottom: 16px
+
+	.btns-header
+		&__btn
+			width: 100%
+
+	.footer
+		&__copyright
+			font-size: 15px
+
+	.menu-footer
+		font-size: 15px
+
+	.section-title
+		font-size: 48px
+		&_sm
+			font-size: 28px
+
+	.section-description
+		font-size: 18px
+
+	.showcase
+		&__title
+			font-size: 48px
+		&__text-wrap
+			font-size: 18px
+		&__btns
+			justify-content: center
+
+	.section-benefits
+		padding: 80px 0 50px
+		.headline
+			margin-bottom: 56px
+
+	.benefits
+		&__item
+			margin-bottom: 48px
+
+	.item-benefit
+		&__title
+			font-size: 24px
+		&__text-wrap
+			font-size: 15px
+
+	.section-steps
+		padding: 80px 0
+		.headline
+			margin-bottom: 48px
+
+	.timeline
+		&__title
+			font-size: 18px
+		&__text
+			font-size: 15px
+
+	.section-pricing
+		.headline
+			margin-bottom: 60px
+
+	.services
+		&__item
+			margin-bottom: 20px
+
+	.item-service
+		&__title
+			font-size: 24px
+
+	.modal
+		&__container
+			width: 100%
+		&__container-inner
+			max-width: none
+			width: 100%
+			height: 100vh
+			border-radius: 0
+		&__inner
+			max-width: 662px
+			margin: 0 auto
+		&__text-wrap
+			font-size: 15px
+		&__close
+			top: 0
+			right: 0
+
+	.form
+		&__label
+			font-size: 15px
+
+	.radio
+		font-size: 15px
+
+@media screen and (max-width: 992px)
+	.benefits
+		margin-left: -10px
+		margin-right: -10px
+		&__item
+			padding: 0 10px
+
+	.services
+		margin-left: -10px
+		margin-right: -10px
+		&__item
+			padding: 0 10px
+
+	.modal
+		&__inner
+			max-width: 490px
+	
+@media screen and (max-width: 768px)
+	.footer
+		&__menu
+			display: none
+
+	.section-title
+		font-size: 28px
+		&_sm
+			font-size: 24px
+
+	.section-description
+		font-size: 15px
+
+	.headline
+		&__title
+			margin-bottom: 16px
+
+	.showcase
+		&__title
+			font-size: 28px
+			margin-bottom: 16px
+		&__text-wrap
+			font-size: 15px
+			margin-bottom: 32px
+		&__btns
+			display: block
+			margin: 0
+		&__btn
+			width: 100%
+			display: block
+			margin: 0
+			&:not(:last-child)
+				margin-bottom: 16px
+
+	.section-benefits
+		.headline
+			margin-bottom: 48px
+
+	.benefits
+		&__item
+			margin-bottom: 40px
+
+	.item-benefit
+		&__title
+			font-size: 18px
+
+	.section-steps
+		.headline
+			margin-bottom: 40px
+
+	.timeline
+		&__item
+			width: 100%
+			flex-direction: row-reverse
+			&:nth-child(odd)
+				right: 0
+				.timeline__content
+					padding-right: 0
+			&:nth-child(even)
+				left: 0
+				.timeline__content
+					padding-left: 24px
+			&:not(:last-child)
+				.timeline__content
+					padding-bottom: 32px
+		&__content
+			padding-left: 24px
+		&__title
+			margin-bottom: 4px
+		&__icon
+			width: 48px
+			height: 48px
+
+	.section-pricing
+		.headline
+			margin-bottom: 40px
+		.section-description
+			font-size: 18px
+
+	.item-service
+		&__title
+			font-size: 18px
+		&__price
+			line-height: 1.24
+
+	.modal
+		&__container-inner
+			padding: 50px 32px
+		&__inner
+			max-width: 100%
+
+@media screen and (max-width: 576px)
+	.item-contact
+		&__value
+			font-size: 15px
+
+	.container
+		padding-left: 30px
+		padding-right: 30px
+
+/*==========  Mobile First  ==========*/
+
+@media screen and (min-width: 576px)
+	// 
+
+@media screen and (min-width: 768px)
+	// 
+
+@media screen and (min-width: 992px)
+	// 
+
+@media screen and (min-width: 1200px)
+	.showcase
+		flex-direction: row
+		&__content
+			flex: 0 0 100%
+		&__body
+			width: 50%
+			padding: 120px 92px 120px 0
+		&__img
+			flex: 0 0 50%
+			transform: translateX(-100%)
+			img
+				height: auto
