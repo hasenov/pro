@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     MicroModal.init({
         awaitCloseAnimation: true,
         disableFocus: true,
+        disableScroll: true,
     });
 
     var hamburger = document.querySelector('.hamburger');
